@@ -1,4 +1,4 @@
-Led controller emulator to use with Orange Nest home automator
+Led controller emulator to use with Mandarin Nest home automator
 -----
 
 ``
@@ -13,7 +13,7 @@ npm run build
 node demo-server.js
 ``
 
-Update Orange Nest home automator by setting 
+Update Mandarin Nest home automator by setting 
 
 ```
 useEmulator: false,
