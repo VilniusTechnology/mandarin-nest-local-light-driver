@@ -7,11 +7,13 @@ export class SocketClient {
 
     public initSocket(SERVER_URL): void {
         this.socket = socketIo(SERVER_URL);
+        console.log('initSocket completed...');
     }
 
     public onMessage(): Observable<Message> {
         return new Observable<Message>(observer => {
             this.socket.on('message', (data: Message) => {
+                console.log('Received incomming messsage: ', data);
                 observer.next(data);
             });
         });

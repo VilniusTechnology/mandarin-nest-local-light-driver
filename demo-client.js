@@ -1,4 +1,4 @@
-const socketClient = require('./dist/index').SocketClient;
+const socketClient = require('./dist/client').SocketClient;
 
 let cc = new socketClient();
 

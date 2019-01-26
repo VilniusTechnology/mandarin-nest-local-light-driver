@@ -1,11 +1,11 @@
 {
   "name": "mandarin-nest-local-light-driver",
-  "version": "1.0.13",
+  "version": "1.2.1",
   "description": "Mandarin Nest local light driver",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git+https://VilniusTechnology/mandarin-nest-local-light-driver.git"
+    "url": "https://github.com/VilniusTechnology/mandarin-nest-local-light-driver"
   },
   "main": "./dist/index.js",
   "types": "dist/index.d.ts",
@@ -21,9 +21,11 @@
     "@types/lodash": "^4.14.119",
     "@types/node": "^10.12.12",
     "@types/socket.io": "^2.1.2",
+    "cors": "^2.8.5",
     "demo-emoji-search": "^2.0.0",
     "express": "^4.16.4",
     "lodash": "^4.17.11",
+    "log4js": "^4.0.0",
     "rxjs": "^6.3.3",
     "socket.io": "^2.2.0",
     "ts-loader": "^5.3.1",

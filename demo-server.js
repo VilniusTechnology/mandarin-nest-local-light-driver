@@ -1,3 +1,10 @@
-const Server = require('./dist/server').LedEmulatorServer;
+const LedEmulatorServer = require('./dist/server').LedEmulatorServer;
 
-let cc = new Server();
+const log4js = require('log4js');
+const logger = log4js.getLogger();
+
+logger.level = 'debug';
+
+let les = new LedEmulatorServer(logger);
+les.launch();
+
