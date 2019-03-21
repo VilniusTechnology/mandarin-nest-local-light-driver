@@ -13,7 +13,7 @@ npm run build
 node demo-server.js
 ``
 
-Update Mandarin Nest home automator by setting 
+Update Tangerine Nest home automator by setting 
 
 ```
 useEmulator: false,
