@@ -1,10 +1,10 @@
-import { Colors } from './../model/colors';
 import { createServer, Server } from 'http';
 import * as express from 'express';
 import * as socketIo from 'socket.io';
 import * as url from 'url';
 import * as _ from "lodash"
 import { PwmDriverEmulator } from '../server';
+import { RGBCCTColors } from '../model/rgb-cct-colors-model';
 
 export class LedEmulatorServer {
     public static readonly PORT_SOCKETS:number = 8081;
@@ -17,6 +17,7 @@ export class LedEmulatorServer {
 
     private pwm: PwmDriverEmulator;
 
+    //////
     private config;
 
     public colors = {
@@ -128,7 +129,7 @@ export class LedEmulatorServer {
         return this.config.main[color];
     }
 
-    public setDutyCycle(pin: number, colors: Colors) {
+    public setDutyCycle(pin: number, colors: RGBCCTColors) {
         // this.io.sockets.emit('message', colors);
         // console.log('Emitted: ', colors);
     }

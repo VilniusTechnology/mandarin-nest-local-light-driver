@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 import * as socketIo from 'socket.io-client';
-import { Message } from '../model/message';
+import { LedEmulatorMessage } from '../model/led-emulator-message-model';
 
 export class SocketClient {
     private socket;
@@ -10,10 +10,9 @@ export class SocketClient {
         console.log('initSocket completed...');
     }
 
-    public onMessage(): Observable<Message> {
-        return new Observable<Message>(observer => {
-            this.socket.on('message', (data: Message) => {
-                console.log('Received incomming messsage: ', data);
+    public onMessage(): Observable<LedEmulatorMessage> {
+        return new Observable<LedEmulatorMessage>(observer => {
+            this.socket.on('message', (data: LedEmulatorMessage) => {
                 observer.next(data);
             });
         });

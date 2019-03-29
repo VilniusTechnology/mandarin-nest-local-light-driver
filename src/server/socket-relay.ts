@@ -1,10 +1,10 @@
+import { RGBCCTColors } from '../model/rgb-cct-colors-model';
 import * as socketIo from 'socket.io';
 import * as express from 'express';
 import { createServer, Server } from 'http';
 
 export class SocketRelay {
-
-    public colors;
+    public colors: RGBCCTColors;
     private io;
     public server: any;
     private app: express.Application;
